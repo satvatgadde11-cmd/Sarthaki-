@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Valentine’s Day ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(#ff9a9e, #fad0c4);
+      text-align: center;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      max-width: 400px;
+      margin: auto;
+    }
+    button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 20px;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #e63950;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="card">
+  <h2>Happy Valentine’s Day ❤️</h2>
+  <p id="question">Ready for a tiny love game?</p>
+
+  <button onclick="next1()">Yes 💕</button>
+</div>
+
+<script>
+function next1() {
+  document.querySelector('.card').innerHTML = `
+    <h3>Question 1 💬</h3>
+    <p>What are you to me?</p>
+    <button onclick="next2()">My safe place ❤️</button>
+    <button onclick="wrong()">Just a boyfriend 😏</button>
+  `;
+}
+
+function next2() {
+  document.querySelector('.card').innerHTML = `
+    <h3>Question 2 💖</h3>
+    <p>What happens when you’re upset?</p>
+    <button onclick="final()">I give you space & come back 🤍</button>
+    <button onclick="wrong()">Ignore you 🙄</button>
+  `;
+}
+
+function final() {
+  document.querySelector('.card').innerHTML = `
+    <h2>Congratulations 🎉</h2>
+    <p>You’ve unlocked unlimited hugs, love, movies, mountains, and lifetime support.</p>
+    <h3>Will you be my Valentine? 🌹</h3>
+    <p>— Yours, always ❤️</p>
+  `;
+}
+
+function wrong() {
+  alert("Wrong 😌 But I still love you.");
+}
+</script>
+
+</body>
+</html>
