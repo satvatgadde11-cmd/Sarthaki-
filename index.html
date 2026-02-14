@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
   <title>Happy Valentine’s Day ❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,7 +18,7 @@
       border-radius: 20px;
       max-width: 420px;
       margin: auto;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
 
     img {
@@ -47,114 +46,127 @@
 
 <body>
 
-  <div class="card" id="game">
-    <!-- STEP 1 -->
-    <h2>Happy Valentine’s Day Guggi Babuu ❤️</h2>
+<div class="card" id="game">
 
-    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9" alt="Cute couple">
+  <!-- STEP 1: WELCOME SCREEN -->
+  <h2>Happy Valentine’s Day Guggi Babuu ❤️</h2>
+
+  <img src="images/Snapchat-1777193747.jpg" alt="Welcome">
+
+  <p>
+    Hey Muffin🤍  
+    I made this little game just for you.  
+    Take your time… no skipping 😌
+  </p>
+
+  <button onclick="step2()">Start 💕</button>
+
+</div>
+
+<script>
+/* STEP 2 */
+function step2() {
+  document.getElementById("game").innerHTML = `
+    <h3>Question 1 💬</h3>
+
+    <img src="images/Snapchat-2064567250.jpg" alt="Question 1">
+
+    <p>What are you to me?</p>
+
+    <button onclick="wrong()">Just a Girlfriend 😏</button>
+    <button onclick="step3()">My safe place ❤️</button>
+  `;
+}
+
+/* STEP 3 */
+function step3() {
+  document.getElementById("game").innerHTML = `
+    <h3>Question 2 🤍</h3>
+
+    <img src="images/Screenshot_2026-02-14-12-45-15-26_6012fa4d4ddec268fc5c7112cbb265e7.jpg" alt="Question 2">
+
+    <p>When you're upset, what do I do?</p>
+
+    <button onclick="wrong()">Argue back and ignore you 🙄</button>
+    <button onclick="step4()">Give space & come back & console you 🤍</button>
+  `;
+}
+
+/* STEP 4 */
+function step4() {
+  document.getElementById("game").innerHTML = `
+    <h3>Question 3 🧠❤️</h3>
+
+    <img src="images/Screenshot_2026-02-14-12-45-15-26_6012fa4d4ddec268fc5c7112cbb265e7.jpg" alt="Question 3">
+
+    <p>What do I love most about you?</p>
+
+    <button onclick="step5()">Your heart, mind & effort, eyes 💖</button>
+    <button onclick="wrong()">Your looks only 😌</button>
+  `;
+}
+
+/* STEP 5 – CONFESSION */
+function step5() {
+  document.getElementById("game").innerHTML = `
+    <h2>Pause 🫶</h2>
+
+    <img src="images/Snapchat-1658523995.jpg" alt="Confession">
 
     <p>
-      Hey Muffin 🤍<br>
-      I made this little game just for you.<br>
-      Take your time… no skipping 😌
+      Hey my guggi babu 💖, I just wanted you to know how deeply loved you are by me.
+      Even with a little distance between us, you make me feel so connected and calm 🫶.
+      I love the way you care, the way you listen, and the quiet understanding we share 🤍.
+      You bring warmth into my life in ways I never expected, but now can’t imagine living without 🌸.
+      I miss you, muffin 😘 — your presence, your voice, and the comfort of being close to you.
+      Every message from you feels like a gentle hug I hold onto 🫂.
+      You make ordinary days feel special just by being part of them ✨.
+      No matter where we are, my heart always feels safe with you 💕.
+      This distance is only temporary, but my love for you is steady and real ❤️.
+      Always know that I’m thinking of you, cheering for you, and holding you close in my heart 🌙.
+      With all my love and affection, always yours 💖
     </p>
 
-    <button onclick="step2()">Start 💕</button>
-  </div>
+    <button onclick="step6()">Continue 💌</button>
+  `;
+}
 
-  <script>
-    function step2() {
-      document.getElementById("game").innerHTML = `
-        <h3>Question 1 💬</h3>
+/* STEP 6 – FINAL QUESTION */
+function step6() {
+  document.getElementById("game").innerHTML = `
+    <h2>Final Question 🌹</h2>
 
-        <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e" alt="Romantic moment">
+    <img src="images/Screenshot_2026-02-14-12-45-58-15_6012fa4d4ddec268fc5c7112cbb265e7.jpg" alt="Final Question">
 
-        <p>What are you to me?</p>
+    <p>Baby, will you be my Valentine?</p>
 
-        <button onclick="wrong()">Just a Girlfriend 😏</button>
-        <button onclick="step3()">My safe place ❤️</button>
-      `;
-    }
+    <button onclick="final()">Yes ❤️</button>
+    <button onclick="final()">Obviously yes 😘</button>
+  `;
+}
 
-    function step3() {
-      document.getElementById("game").innerHTML = `
-        <h3>Question 2 🤍</h3>
+/* FINAL SCREEN */
+function final() {
+  document.getElementById("game").innerHTML = `
+    <h1>Yayyy 🎉❤️😁</h1>
 
-        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e" alt="Thoughtful moment">
+    <img src="images/Screenshot_2026-02-14-12-45-58-15_6012fa4d4ddec268fc5c7112cbb265e7.jpg" alt="Forever">
 
-        <p>When you're upset, what do I do?</p>
+    <p>
+      ✨ You’ve unlocked a lifetime of love, comfort, and warmth.
+      Someone who chooses you every day, stands by you, and holds you close no matter the distance.
+      Welcome to my heart — it’s yours, always 💖  
+      <br><br>
+      — Yours, always 💖
+    </p>
+  `;
+}
 
-        <button onclick="wrong()">Argue back and ignore you 🙄</button>
-        <button onclick="step4()">Give space, come back & console you 🤍</button>
-      `;
-    }
-
-    function step4() {
-      document.getElementById("game").innerHTML = `
-        <h3>Question 3 🧠❤️</h3>
-
-        <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659" alt="Happy couple">
-
-        <p>What do I love most about you?</p>
-
-        <button onclick="step5()">Your heart, mind, effort & eyes 💖</button>
-        <button onclick="wrong()">Your looks only 😌</button>
-      `;
-    }
-
-    function step5() {
-      document.getElementById("game").innerHTML = `
-        <h2>Pause 🫶</h2>
-
-        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1" alt="Love and comfort">
-
-        <p>
-          Hey my guggi babu 💖,<br><br>
-          I just wanted you to know how deeply loved you are by me.
-          Even with a little distance between us, you make me feel connected and calm 🫶.<br><br>
-          I love the way you care, the way you listen, and the quiet understanding we share 🤍.
-          You bring warmth into my life in ways I never expected 🌸.<br><br>
-          I miss you, muffin 😘 — your presence, your voice, and the comfort of being close.
-          Every message from you feels like a gentle hug 🫂.<br><br>
-          No matter where we are, my heart always feels safe with you 💕.
-          This distance is temporary, but my love for you is steady and real ❤️.
-        </p>
-
-        <button onclick="step6()">Continue 💌</button>
-      `;
-    }
-
-    function step6() {
-      document.getElementById("game").innerHTML = `
-        <h2>Final Question 🌹</h2>
-
-        <img src="https://images.unsplash.com/photo-1513279922550-250c2129b13a" alt="Proposal moment">
-
-        <p>Baby, will you be my Valentine?</p>
-
-        <button onclick="final()">Yes ❤️</button>
-        <button onclick="final()">Obviously yes 😘</button>
-      `;
-    }
-
-    function final() {
-      document.getElementById("game").innerHTML = `
-        <h1>Yayyy 🎉❤️😁</h1>
-
-        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2" alt="Celebration">
-
-        <p>
-          ✨ You’ve unlocked a lifetime of love, comfort, and warmth.<br>
-          Someone who chooses you every day, no matter the distance 💖<br><br>
-          — Yours, always 💖
-        </p>
-      `;
-    }
-
-    function wrong() {
-      alert("Wrong 😌 But you’re still my favorite human.");
-    }
-  </script>
+/* WRONG ANSWER */
+function wrong() {
+  alert("Wrong 😌 But you’re still my favorite human.");
+}
+</script>
 
 </body>
 </html>
